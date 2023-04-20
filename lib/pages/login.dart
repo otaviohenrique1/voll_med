@@ -14,7 +14,7 @@ class _LoginState extends State<Login> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        // backgroundColor: Theme.of(context).colorScheme.primary,
         // title: const Text("Login"),
         automaticallyImplyLeading: false,
       ),

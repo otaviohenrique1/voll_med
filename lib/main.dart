@@ -14,7 +14,9 @@ class VollMed extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme:
-            ColorScheme.fromSeed(seedColor: const Color.fromARGB(0, 33, 61, 1)),
+            ColorScheme.fromSeed(seedColor: const Color.fromRGBO(0, 33, 61, 1)),
+        appBarTheme:
+            const AppBarTheme(backgroundColor: Color.fromRGBO(0, 33, 61, 1)),
         useMaterial3: true,
       ),
       home: const Login(),
