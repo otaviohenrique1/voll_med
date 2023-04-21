@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:voll_med/components/botao.dart';
+import 'package:voll_med/components/campo_text.dart';
 import 'package:voll_med/pages/cadastro.dart';
 
 class Login extends StatefulWidget {
@@ -37,54 +39,35 @@ class _LoginState extends State<Login> {
               key: formKey,
               child: Column(
                 children: [
-                  Container(
-                    padding: const EdgeInsets.only(bottom: 16),
-                    child: Column(
-                      children: [
-                        const Align(
-                          alignment: Alignment.centerLeft,
-                          child: Text(
-                            "Email",
-                            style: TextStyle(
-                              color: Color.fromRGBO(11, 59, 96, 1),
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 8),
-                        Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 16),
-                          decoration: BoxDecoration(
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.grey.withOpacity(0.2),
-                                // color: Color.fromRGBO(248, 248, 248, 1),
-                                spreadRadius: 0,
-                                blurRadius: 6,
-                                offset: const Offset(2, 2),
-                              ),
-                            ],
-                            border: Border.all(
-                              width: 1,
-                              color: Colors.grey.withOpacity(0.2),
-                            ),
-                            borderRadius: BorderRadius.circular(8),
-                          ),
-                          child: TextFormField(
-                            controller: _emailController,
-                            decoration: const InputDecoration(
-                              hintText: "Insira seu endereço de email",
-                              hintStyle: TextStyle(fontSize: 16),
-                              border: InputBorder.none,
-                            ),
-                            style: const TextStyle(fontSize: 16),
-                          ),
-                        ),
-                      ],
-                    ),
+                  CampoTexto(
+                    label: "Email",
+                    hintText: "Insira seu endereço de email",
+                    controller: _emailController,
+                    exibeLabel: true,
+                    keyboardType: TextInputType.emailAddress,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Campo vazio";
+                      }
+                      return null;
+                    },
                   ),
-                  ElevatedButton(
+                  const SizedBox(height: 24),
+                  CampoTexto(
+                    label: "Senha",
+                    hintText: "Insira sua senha",
+                    controller: _senhaController,
+                    exibeLabel: true,
+                    keyboardType: TextInputType.text,
+                    obscureText: true,
+                    validator: (value) {
+                      if (value == null || value.isEmpty) {
+                        return "Campo vazio";
+                      }
+                      return null;
+                    },
+                  ),
+                  Botao(
                     onPressed: () {
                       Navigator.push(
                         context,
@@ -93,7 +76,10 @@ class _LoginState extends State<Login> {
                         ),
                       );
                     },
-                    child: const Text('Avançar'),
+                    label: "Entrar",
+                    backgroundColor: const Color.fromRGBO(11, 59, 96, 1),
+                    fontColor: Colors.white,
+                    fontSize: 16,
                   ),
                 ],
               ),
