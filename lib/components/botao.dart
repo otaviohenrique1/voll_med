@@ -5,7 +5,6 @@ class Botao extends StatelessWidget {
   final Color fontColor;
   final Color backgroundColor;
   final String label;
-  final double fontSize;
 
   const Botao({
     super.key,
@@ -13,7 +12,6 @@ class Botao extends StatelessWidget {
     required this.fontColor,
     required this.label,
     required this.backgroundColor,
-    required this.fontSize,
   });
 
   @override
@@ -25,17 +23,17 @@ class Botao extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         minimumSize: const Size.fromHeight(33),
         shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(
-            Radius.circular(8),
-          ),
+          borderRadius: BorderRadius.all(Radius.circular(8)),
         ),
       ),
       onPressed: onPressed,
       child: Text(
         label,
         style: TextStyle(
-          fontSize: fontSize,
           color: fontColor,
+          fontSize: 16,
+          fontFamily: "PublicSans",
+          fontWeight: FontWeight.w700,
         ),
       ),
     );

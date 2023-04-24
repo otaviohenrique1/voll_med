@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voll_med/assets/styles/colors.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_text.dart';
 import 'package:voll_med/pages/cadastro.dart';
@@ -77,9 +78,8 @@ class _LoginState extends State<Login> {
                       );
                     },
                     label: "Entrar",
-                    backgroundColor: const Color.fromRGBO(11, 59, 96, 1),
+                    backgroundColor: azulEscuro,
                     fontColor: Colors.white,
-                    fontSize: 16,
                   ),
                 ],
               ),
