@@ -2,7 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:voll_med/styles/colors.dart';
 import 'package:voll_med/components/botao.dart';
-import 'package:voll_med/components/campo_text.dart';
+import 'package:voll_med/components/campo_texto.dart';
 import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/pages/cadastro.dart';
 
@@ -39,10 +39,15 @@ class _LoginState extends State<Login> {
         child: ListView(
           children: [
             Center(
-              child: Image.file(
-                File("lib/assets/img/logo.jpg"),
-                // width: 200,
-                // height: 200,
+              child: Container(
+                width: 103.07,
+                height: 24,
+                color: Colors.white,
+                child: const Placeholder(
+                  child: Center(
+                    child: Text("Logo"),
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 72),
