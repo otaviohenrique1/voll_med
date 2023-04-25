@@ -1,8 +1,9 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:voll_med/assets/styles/colors.dart';
-import 'package:voll_med/assets/styles/fonts.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_text.dart';
+import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/pages/cadastro.dart';
 
 class Login extends StatefulWidget {
@@ -37,7 +38,18 @@ class _LoginState extends State<Login> {
         padding: const EdgeInsets.all(24),
         child: ListView(
           children: [
-            Titulo(titulo: "Faça login em sua conta"),
+            Image.file(
+              File("lib/assets/img/logo.png"),
+              width: 200,
+              height: 200,
+            ),
+            const SizedBox(height: 72),
+            const Titulo(
+              titulo: "Faça login em sua conta",
+              color: cinza3,
+              alignment: Alignment.center,
+            ),
+            const SizedBox(height: 48),
             Form(
               key: formKey,
               child: Column(
@@ -87,30 +99,6 @@ class _LoginState extends State<Login> {
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class Titulo extends StatelessWidget {
-  const Titulo({
-    super.key,
-    required this.titulo,
-  });
-
-  final String titulo;
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        titulo,
-        softWrap: true,
-        style: const TextStyle(
-          color: cinza3,
-          fontSize: 24,
-          fontFamily: fontFamily,
         ),
       ),
     );

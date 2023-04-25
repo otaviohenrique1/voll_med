@@ -12,7 +12,8 @@ var styleH2Bold = {
   "fontFamily": fontFamily,
   "fontWeight": FontWeight.w700,
   "fontSize": 24,
-  "lineHeight": "auto",
+  "lineHeight": 30,
+  // "lineHeight": "auto",
 };
 
 var styleH2Regular = {
