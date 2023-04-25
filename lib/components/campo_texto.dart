@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:voll_med/styles/colors.dart';
 
 class CampoTexto extends StatelessWidget {
   const CampoTexto({
@@ -51,18 +52,19 @@ class CampoTexto extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-              boxShadow: [
+              color: Colors.white,
+              boxShadow: const [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.2),
-                  // color: Color.fromRGBO(248, 248, 248, 1),
+                  color: Color.fromRGBO(0, 0, 0, 0.25),
                   spreadRadius: 0,
                   blurRadius: 6,
-                  offset: const Offset(2, 2),
+                  offset: Offset(2, 2),
                 ),
               ],
               border: Border.all(
                 width: 1,
-                color: Colors.grey.withOpacity(0.2),
+                color: cinza1,
+                style: BorderStyle.solid,
               ),
               borderRadius: BorderRadius.circular(8),
             ),
