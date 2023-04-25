@@ -1,10 +1,13 @@
-import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:voll_med/components/botao_texto.dart';
 import 'package:voll_med/styles/colors.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_texto.dart';
 import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/pages/cadastro.dart';
+import 'package:voll_med/styles/fonts.dart';
+
+import 'logo.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -35,22 +38,15 @@ class _LoginState extends State<Login> {
         automaticallyImplyLeading: false,
       ),
       body: Padding(
-        padding: const EdgeInsets.all(24),
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        // padding: const EdgeInsets.all(24),
         child: ListView(
           children: [
-            Center(
-              child: Container(
-                width: 103.07,
-                height: 24,
-                color: Colors.white,
-                child: const Placeholder(
-                  child: Center(
-                    child: Text("Logo"),
-                  ),
-                ),
-              ),
-            ),
             const SizedBox(height: 72),
+            // const SizedBox(height: 122),
+            const Logo(),
+            const SizedBox(height: 48),
+            // const SizedBox(height: 72),
             const Titulo(
               titulo: "Faça login em sua conta",
               color: cinza3,
@@ -89,22 +85,52 @@ class _LoginState extends State<Login> {
                       return null;
                     },
                   ),
+                  const SizedBox(height: 24),
                   Botao(
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Cadastro(),
-                        ),
-                      );
-                    },
+                    onPressed: () {},
                     label: "Entrar",
                     backgroundColor: azul4,
                     fontColor: branco,
                   ),
+                  BotaoTexto(
+                    onPressed: () {},
+                    label: "Esqueceu sua senha?",
+                    fontColor: azul3,
+                    decoration: TextDecoration.underline,
+                    decorationColor: azul3,
+                    fontWeight: fontWeightRegular,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Text(
+                        "Ainda não tem conta?",
+                        style: TextStyle(
+                          color: cinza3,
+                          fontSize: 16,
+                          fontFamily: fontFamily,
+                          fontWeight: fontWeightRegular,
+                        ),
+                      ),
+                      BotaoTexto(
+                        label: "Faça seu cadastro!",
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Cadastro(),
+                            ),
+                          );
+                        },
+                        fontColor: azul2,
+                        fontWeight: fontWeightBold,
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
+            const SizedBox(height: 48),
           ],
         ),
       ),

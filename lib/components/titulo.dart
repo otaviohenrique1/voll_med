@@ -24,6 +24,7 @@ class Titulo extends StatelessWidget {
           color: color,
           fontSize: 24,
           fontFamily: fontFamily,
+          fontWeight: fontWeightBold,
         ),
       ),
     );

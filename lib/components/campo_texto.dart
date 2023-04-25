@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:voll_med/styles/colors.dart';
 
+import '../styles/fonts.dart';
+
 class CampoTexto extends StatelessWidget {
   const CampoTexto({
     super.key,
@@ -42,7 +44,7 @@ class CampoTexto extends StatelessWidget {
                   (label == null) ? "" : label!,
                   style: const TextStyle(
                     color: Color.fromRGBO(11, 59, 96, 1),
-                    fontWeight: FontWeight.bold,
+                    fontWeight: fontWeightBold,
                     fontSize: 16,
                   ),
                 ),

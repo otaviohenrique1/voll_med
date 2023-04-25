@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/pages/login.dart';
 
+import 'logo.dart';
+
 class Cadastro extends StatefulWidget {
   const Cadastro({super.key});
 
@@ -17,17 +19,25 @@ class _CadastroState extends State<Cadastro> {
         // backgroundColor: Theme.of(context).colorScheme.primary,
         automaticallyImplyLeading: false,
       ),
-      body: Center(
-        child: TextButton(
-          onPressed: () {
-            Navigator.pop(
-              context,
-              MaterialPageRoute(
-                builder: (context) => const Login(),
-              ),
-            );
-          },
-          child: const Text('Cadastro'),
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 24),
+        child: ListView(
+          children: [
+            const SizedBox(height: 16),
+            const Logo(),
+            const SizedBox(height: 48),
+            TextButton(
+              onPressed: () {
+                Navigator.pop(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const Login(),
+                  ),
+                );
+              },
+              child: const Text('Cadastro'),
+            ),
+          ],
         ),
       ),
     );
