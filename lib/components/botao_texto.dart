@@ -1,31 +1,27 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/styles/fonts.dart';
 
-class Botao extends StatelessWidget {
-  const Botao({
+class BotaoTexto extends StatelessWidget {
+  const BotaoTexto({
     super.key,
     required this.onPressed,
     required this.fontColor,
     required this.label,
-    required this.backgroundColor,
+    this.decoration,
+    this.decorationColor,
+    required this.fontWeight,
   });
 
   final void Function() onPressed;
   final Color fontColor;
-  final Color backgroundColor;
   final String label;
+  final TextDecoration? decoration;
+  final Color? decorationColor;
+  final FontWeight fontWeight;
 
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor,
-        padding: const EdgeInsets.all(8),
-        minimumSize: const Size.fromHeight(33),
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(8)),
-        ),
-      ),
+    return TextButton(
       onPressed: onPressed,
       child: Text(
         label,
@@ -33,7 +29,9 @@ class Botao extends StatelessWidget {
           color: fontColor,
           fontSize: 16,
           fontFamily: fontFamily,
-          fontWeight: fontWeightBold,
+          fontWeight: fontWeight,
+          decoration: decoration,
+          decorationColor: decorationColor,
         ),
       ),
     );
