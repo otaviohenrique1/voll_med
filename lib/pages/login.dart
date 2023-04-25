@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/assets/styles/colors.dart';
+import 'package:voll_med/assets/styles/fonts.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_text.dart';
 import 'package:voll_med/pages/cadastro.dart';
@@ -36,6 +37,7 @@ class _LoginState extends State<Login> {
         padding: const EdgeInsets.all(24),
         child: ListView(
           children: [
+            Titulo(titulo: "Faça login em sua conta"),
             Form(
               key: formKey,
               child: Column(
@@ -78,13 +80,37 @@ class _LoginState extends State<Login> {
                       );
                     },
                     label: "Entrar",
-                    backgroundColor: azulEscuro,
-                    fontColor: Colors.white,
+                    backgroundColor: azul4,
+                    fontColor: branco,
                   ),
                 ],
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class Titulo extends StatelessWidget {
+  const Titulo({
+    super.key,
+    required this.titulo,
+  });
+
+  final String titulo;
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Text(
+        titulo,
+        softWrap: true,
+        style: const TextStyle(
+          color: cinza3,
+          fontSize: 24,
+          fontFamily: fontFamily,
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voll_med/assets/styles/fonts.dart';
 
 class Botao extends StatelessWidget {
   final void Function() onPressed;
@@ -18,7 +19,6 @@ class Botao extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        // textStyle: const TextStyle(fontSize: 20),
         backgroundColor: backgroundColor,
         padding: const EdgeInsets.all(8),
         minimumSize: const Size.fromHeight(33),
@@ -32,7 +32,7 @@ class Botao extends StatelessWidget {
         style: TextStyle(
           color: fontColor,
           fontSize: 16,
-          fontFamily: "PublicSans",
+          fontFamily: fontFamily,
           fontWeight: FontWeight.w700,
         ),
       ),
