@@ -64,7 +64,9 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - lib/assets/img/logo.png
+    # - assets/img/
+    # - assets/img/logo.png
+    - assets/img/logo.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -91,9 +93,9 @@ flutter:
   fonts:
     - family: PublicSans
       fonts:
-        - asset: lib/assets/fonts/PublicSans-Bold.ttf
+        - asset: fonts/PublicSans-Bold.ttf
           weight: 700
-        - asset: lib/assets/fonts/PublicSans-Regular.ttf
+        - asset: fonts/PublicSans-Regular.ttf
           weight: 400
   #
   # For details regarding fonts from package dependencies,

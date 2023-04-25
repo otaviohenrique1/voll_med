@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/assets/styles/fonts.dart';
+import 'package:voll_med/styles/fonts.dart';
 
 class Botao extends StatelessWidget {
   final void Function() onPressed;
