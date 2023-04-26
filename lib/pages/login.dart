@@ -66,6 +66,7 @@ class _LoginState extends State<Login> {
                     exibeLabel: true,
                     keyboardType: TextInputType.emailAddress,
                     validator: validaEmail,
+                    obscureText: false,
                   ),
                   const SizedBox(height: 24),
                   CampoTexto(

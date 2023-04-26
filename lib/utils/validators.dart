@@ -1,21 +1,25 @@
 import 'package:flutter/material.dart';
 
-String? validaNome(value) {
-  if (value == null || value.isEmpty) {
+bool validaValor(String? value) {
+  return (value == null || value.isEmpty);
+}
+
+String? validaCampoVazio(String? value) {
+  if (validaValor(value)) {
     return "Campo vazio";
   }
   return null;
 }
 
-String? validaEmail(value) {
-  if (value == null || value.isEmpty) {
+String? validaEmail(String? value) {
+  if (validaValor(value)) {
     return "Campo vazio";
   }
   return null;
 }
 
-String? validaSenha(value) {
-  if (value == null || value.isEmpty) {
+String? validaSenha(String? value) {
+  if (validaValor(value)) {
     return "Campo vazio";
   }
   return null;
@@ -23,7 +27,7 @@ String? validaSenha(value) {
 
 String? validaRepitaSenha(
     String? value, TextEditingController senhaController) {
-  if (value == null || value.isEmpty) {
+  if (validaValor(value)) {
     return "Campo vazio";
   } else if (senhaController.text != value) {
     return "Senhas não coincidem";

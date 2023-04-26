@@ -9,10 +9,10 @@ class CampoTexto extends StatelessWidget {
     required this.controller,
     required this.hintText,
     required this.exibeLabel,
+    required this.obscureText,
     this.label,
     this.validator,
     this.keyboardType,
-    this.obscureText,
     this.initialValue,
     this.inputFormatters,
   });
@@ -22,7 +22,7 @@ class CampoTexto extends StatelessWidget {
   final String hintText;
   final String? Function(String?)? validator;
   final TextInputType? keyboardType;
-  final bool? obscureText;
+  final bool obscureText;
   final String? initialValue;
   final List<TextInputFormatter>? inputFormatters;
   final bool exibeLabel;
@@ -78,6 +78,7 @@ class CampoTexto extends StatelessWidget {
               ),
               style: const TextStyle(fontSize: 16),
               validator: validator,
+              obscureText: obscureText,
             ),
           ),
         ],
