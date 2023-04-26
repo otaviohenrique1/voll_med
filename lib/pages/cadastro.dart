@@ -47,6 +47,8 @@ class _CadastroState extends State<Cadastro> {
     super.dispose();
   }
 
+  bool isChecked = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -198,16 +200,16 @@ class _CadastroState extends State<Cadastro> {
  * 
  * 
  */
-                  const Column(
+                  Column(
                     children: [
-                      SizedBox(height: 24),
-                      Titulo(
+                      const SizedBox(height: 24),
+                      const Titulo(
                         titulo: "Insira alguns dados básicos:",
                         color: cinza3,
                         alignment: Alignment.center,
                       ),
-                      SizedBox(height: 24),
-                      Align(
+                      const SizedBox(height: 24),
+                      const Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Selecione os planos :",
@@ -218,6 +220,33 @@ class _CadastroState extends State<Cadastro> {
                             fontWeight: fontWeightBold,
                           ),
                         ),
+                      ),
+                      Checkbox(
+                        checkColor: Colors.white,
+                        value: isChecked,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            isChecked = value!;
+                          });
+                        },
+                      ),
+                      Checkbox(
+                        checkColor: Colors.white,
+                        value: isChecked,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            isChecked = value!;
+                          });
+                        },
+                      ),
+                      Checkbox(
+                        checkColor: Colors.white,
+                        value: isChecked,
+                        onChanged: (bool? value) {
+                          setState(() {
+                            isChecked = value!;
+                          });
+                        },
                       ),
                     ],
                   ),
