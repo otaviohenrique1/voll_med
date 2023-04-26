@@ -59,10 +59,13 @@ class _CadastroState extends State<Cadastro> {
     CheckboxModel(texto: "Não tenho plano"),
   ];
 
-  bool exibeErroListaPlano = false;
+  // bool exibeErroListaPlano = false;
+
+  int indiceTab = 0;
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     List<CheckboxModel> itensMarcados =
         List.from(itens.where((item) => item.checked));
 
@@ -78,12 +81,18 @@ class _CadastroState extends State<Cadastro> {
           children: [
             const SizedBox(height: 16),
             const Logo(),
+            Center(
+              child: Text(
+                "[$indiceTab]",
+                style: const TextStyle(fontSize: 20),
+              ),
+            ),
             Form(
               key: formKey,
               child: Column(
                 children: [
                   Visibility(
-                    visible: false,
+                    visible: (indiceTab == 0) ? true : false,
                     child: Column(
                       children: [
                         const SizedBox(height: 24),
@@ -102,37 +111,37 @@ class _CadastroState extends State<Cadastro> {
                           validator: validaCampoVazio,
                           obscureText: false,
                         ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Email",
-                          hintText: "Insira seu endereço de email",
-                          controller: _emailController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.emailAddress,
-                          validator: validaEmail,
-                          obscureText: false,
-                        ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Crie uma senha",
-                          hintText: "Insira sua senha",
-                          controller: _senhaController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.text,
-                          obscureText: true,
-                          validator: validaSenha,
-                        ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Repita a senha",
-                          hintText: "Insira sua senha",
-                          controller: _repitaSenhaController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.text,
-                          obscureText: true,
-                          validator: (value) =>
-                              validaRepitaSenha(value, _senhaController),
-                        ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Email",
+                        //   hintText: "Insira seu endereço de email",
+                        //   controller: _emailController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.emailAddress,
+                        //   validator: validaEmail,
+                        //   obscureText: false,
+                        // ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Crie uma senha",
+                        //   hintText: "Insira sua senha",
+                        //   controller: _senhaController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.text,
+                        //   obscureText: true,
+                        //   validator: validaSenha,
+                        // ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Repita a senha",
+                        //   hintText: "Insira sua senha",
+                        //   controller: _repitaSenhaController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.text,
+                        //   obscureText: true,
+                        //   validator: (value) =>
+                        //       validaRepitaSenha(value, _senhaController),
+                        // ),
                       ],
                     ),
                   ),
@@ -146,7 +155,7 @@ class _CadastroState extends State<Cadastro> {
  * 
  */
                   Visibility(
-                    visible: false,
+                    visible: (indiceTab == 1) ? true : false,
                     child: Column(
                       children: [
                         const SizedBox(height: 24),
@@ -166,49 +175,49 @@ class _CadastroState extends State<Cadastro> {
                           obscureText: false,
                           inputFormatters: [_numeroCEP],
                         ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Endereço",
-                          hintText: "Insira seu endereço",
-                          controller: _enderecoController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.text,
-                          validator: validaCampoVazio,
-                          obscureText: false,
-                        ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Número",
-                          hintText: "Insira seu número",
-                          controller: _numeroController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.number,
-                          obscureText: false,
-                          validator: validaSenha,
-                        ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Complemento",
-                          hintText: "Insira seu complemento",
-                          controller: _complementoController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.text,
-                          obscureText: false,
-                          validator: (value) =>
-                              validaRepitaSenha(value, _senhaController),
-                        ),
-                        const SizedBox(height: 16),
-                        CampoTexto(
-                          label: "Telefone",
-                          hintText: "(00) 00000-0000",
-                          controller: _telefoneController,
-                          exibeLabel: true,
-                          keyboardType: TextInputType.number,
-                          obscureText: false,
-                          inputFormatters: [_numeroCelularFormatter],
-                          validator: (value) =>
-                              validaRepitaSenha(value, _senhaController),
-                        ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Endereço",
+                        //   hintText: "Insira seu endereço",
+                        //   controller: _enderecoController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.text,
+                        //   validator: validaCampoVazio,
+                        //   obscureText: false,
+                        // ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Número",
+                        //   hintText: "Insira seu número",
+                        //   controller: _numeroController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.number,
+                        //   obscureText: false,
+                        //   validator: validaSenha,
+                        // ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Complemento",
+                        //   hintText: "Insira seu complemento",
+                        //   controller: _complementoController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.text,
+                        //   obscureText: false,
+                        //   validator: (value) =>
+                        //       validaRepitaSenha(value, _senhaController),
+                        // ),
+                        // const SizedBox(height: 16),
+                        // CampoTexto(
+                        //   label: "Telefone",
+                        //   hintText: "(00) 00000-0000",
+                        //   controller: _telefoneController,
+                        //   exibeLabel: true,
+                        //   keyboardType: TextInputType.number,
+                        //   obscureText: false,
+                        //   inputFormatters: [_numeroCelularFormatter],
+                        //   validator: (value) =>
+                        //       validaRepitaSenha(value, _senhaController),
+                        // ),
                       ],
                     ),
                   ),
@@ -221,69 +230,50 @@ class _CadastroState extends State<Cadastro> {
  * 
  * 
  */
-                  Column(
-                    children: [
-                      const SizedBox(height: 24),
-                      const Titulo(
-                        titulo: "Insira alguns dados básicos:",
-                        color: cinza3,
-                        alignment: Alignment.center,
-                      ),
-                      const SizedBox(height: 24),
-                      const Align(
-                        alignment: Alignment.centerLeft,
-                        child: Text(
-                          "Selecione os planos :",
-                          style: TextStyle(
-                            color: azul3,
-                            fontSize: 16,
-                            fontFamily: fontFamily,
-                            fontWeight: fontWeightBold,
-                          ),
+                  Visibility(
+                    visible: (indiceTab == 2) ? true : false,
+                    child: Column(
+                      children: [
+                        const SizedBox(height: 24),
+                        const Titulo(
+                          titulo: "Insira alguns dados básicos:",
+                          color: cinza3,
+                          alignment: Alignment.center,
                         ),
-                      ),
-                      // Column(
-                      //   children: [
-                      //     ListView.builder(
-                      //       shrinkWrap: true,
-                      //       itemCount: 8,
-                      //       itemBuilder: (context, index) {
-                      //         return CampoCheckbox(item: itens[index]);
-                      //       },
-                      //     ),
-                      //   ],
-                      // ),
-                      // Text("${itensMarcados.length}"),
-                      // validaListaPlanos
-                      /*
-                        avancar = false => faz nada
-                        avancar = true => validaListaPlanos
-                      */
-                      Visibility(
-                        visible: exibeErroListaPlano,
-                        // visible: (itensMarcados.isEmpty) ? true : false,
-                        child: const Padding(
-                          padding: EdgeInsets.symmetric(vertical: 16),
+                        const SizedBox(height: 24),
+                        const Align(
+                          alignment: Alignment.centerLeft,
                           child: Text(
-                            "Escolha uma opção para poder continuar",
+                            "Selecione os planos :",
                             style: TextStyle(
-                              color: Colors.red,
+                              color: azul3,
                               fontSize: 16,
                               fontFamily: fontFamily,
                               fontWeight: fontWeightBold,
                             ),
                           ),
                         ),
-                      ),
-                      CampoCheckbox(item: itens[0]),
-                      CampoCheckbox(item: itens[1]),
-                      CampoCheckbox(item: itens[2]),
-                      CampoCheckbox(item: itens[3]),
-                      CampoCheckbox(item: itens[4]),
-                      CampoCheckbox(item: itens[5]),
-                      CampoCheckbox(item: itens[6]),
-                      CampoCheckbox(item: itens[7]),
-                    ],
+                        // Column(
+                        //   children: [
+                        //     ListView.builder(
+                        //       shrinkWrap: true,
+                        //       itemCount: 8,
+                        //       itemBuilder: (context, index) {
+                        //         return CampoCheckbox(item: itens[index]);
+                        //       },
+                        //     ),
+                        //   ],
+                        // ),
+                        CampoCheckbox(item: itens[0]),
+                        CampoCheckbox(item: itens[1]),
+                        // CampoCheckbox(item: itens[2]),
+                        // CampoCheckbox(item: itens[3]),
+                        // CampoCheckbox(item: itens[4]),
+                        // CampoCheckbox(item: itens[5]),
+                        // CampoCheckbox(item: itens[6]),
+                        // CampoCheckbox(item: itens[7]),
+                      ],
+                    ),
                   ),
 /**
  * 
@@ -295,23 +285,41 @@ class _CadastroState extends State<Cadastro> {
  * 
  */
                   const SizedBox(height: 24),
-                  Botao(
-                    onPressed: () {},
-                    label: "Voltar",
-                    backgroundColor: cinza2,
-                    fontColor: branco,
+                  Visibility(
+                    visible: (indiceTab > 0) ? true : false,
+                    child: Botao(
+                      onPressed: () {
+                        setState(() {
+                          if (indiceTab <= 0) {
+                            indiceTab = 0;
+                          } else {
+                            indiceTab -= 1;
+                          }
+                        });
+                      },
+                      label: "Voltar",
+                      backgroundColor: cinza2,
+                      fontColor: branco,
+                    ),
                   ),
                   const SizedBox(height: 24),
                   Botao(
                     onPressed: () {
-                      if (formKey.currentState!.validate()) {
-                        //   Navigator.pop(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => const Login(),
-                        //     ),
-                        //   );
-                      }
+                      // if (formKey.currentState!.validate()) {
+                      //   Navigator.pop(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //       builder: (context) => const Login(),
+                      //     ),
+                      //   );
+                      // }
+                      setState(() {
+                        if (indiceTab == 2) {
+                          indiceTab = 0;
+                        } else {
+                          indiceTab += 1;
+                        }
+                      });
                     },
                     label: "Avançar",
                     backgroundColor: azul4,
