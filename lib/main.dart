@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/pages/login.dart';
+import 'package:voll_med/pages/cadastro.dart';
+// import 'package:voll_med/pages/login.dart';
 
 void main() {
   runApp(const VollMed());
@@ -19,7 +20,8 @@ class VollMed extends StatelessWidget {
             const AppBarTheme(backgroundColor: Color.fromRGBO(0, 33, 61, 1)),
         useMaterial3: true,
       ),
-      home: const Login(),
+      // home: const Login(),
+      home: const Cadastro(),
     );
   }
 }
