@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/pages/login.dart';
+import 'package:voll_med/utils/validators.dart';
 
 import '../components/botao.dart';
 import '../components/campo_texto.dart';
@@ -60,13 +61,8 @@ class _CadastroState extends State<Cadastro> {
                     hintText: "Digite seu nome completo",
                     controller: _emailController,
                     exibeLabel: true,
-                    keyboardType: TextInputType.emailAddress,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Campo vazio";
-                      }
-                      return null;
-                    },
+                    keyboardType: TextInputType.text,
+                    validator: validaNome,
                   ),
                   const SizedBox(height: 16),
                   CampoTexto(
@@ -75,12 +71,7 @@ class _CadastroState extends State<Cadastro> {
                     controller: _emailController,
                     exibeLabel: true,
                     keyboardType: TextInputType.emailAddress,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Campo vazio";
-                      }
-                      return null;
-                    },
+                    validator: validaEmail,
                   ),
                   const SizedBox(height: 16),
                   CampoTexto(
@@ -90,12 +81,7 @@ class _CadastroState extends State<Cadastro> {
                     exibeLabel: true,
                     keyboardType: TextInputType.text,
                     obscureText: true,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Campo vazio";
-                      }
-                      return null;
-                    },
+                    validator: validaSenha,
                   ),
                   const SizedBox(height: 16),
                   CampoTexto(
@@ -105,14 +91,8 @@ class _CadastroState extends State<Cadastro> {
                     exibeLabel: true,
                     keyboardType: TextInputType.text,
                     obscureText: true,
-                    validator: (value) {
-                      if (value == null || value.isEmpty) {
-                        return "Campo vazio";
-                      } else if (_senhaController.text == value) {
-                        return "Senhas não coincidem";
-                      }
-                      return null;
-                    },
+                    validator: (value) =>
+                        validaRepitaSenha(value, _senhaController),
                   ),
                   const SizedBox(height: 24),
                   Botao(

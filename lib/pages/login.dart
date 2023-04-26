@@ -6,6 +6,7 @@ import 'package:voll_med/components/campo_texto.dart';
 import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/pages/cadastro.dart';
 import 'package:voll_med/styles/fonts.dart';
+import 'package:voll_med/utils/validators.dart';
 
 import '../components/logo.dart';
 
@@ -26,23 +27,6 @@ class _LoginState extends State<Login> {
     _emailController.dispose();
     _senhaController.dispose();
     super.dispose();
-  }
-
-  // String _erroEmail = "";
-  // String _erroSenha = "";
-
-  String? validaEmail(value) {
-    if (value == null || value.isEmpty) {
-      return "Campo vazio";
-    }
-    return null;
-  }
-
-  String? validaSenha(value) {
-    if (value == null || value.isEmpty) {
-      return "Campo vazio";
-    }
-    return null;
   }
 
   @override
@@ -97,12 +81,6 @@ class _LoginState extends State<Login> {
                   Botao(
                     onPressed: () {
                       if (formKey.currentState!.validate()) {}
-                      /* else {
-                        setState(() {
-                          _erroEmail = validaEmail(_emailController.text)!;
-                          _erroSenha = validaSenha(_senhaController.text)!;
-                        });
-                      } */
                     },
                     label: "Entrar",
                     backgroundColor: azul4,
