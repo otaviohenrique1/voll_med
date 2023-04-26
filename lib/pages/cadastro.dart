@@ -59,6 +59,8 @@ class _CadastroState extends State<Cadastro> {
     CheckboxModel(texto: "Não tenho plano"),
   ];
 
+  bool exibeErroListaPlano = false;
+
   @override
   Widget build(BuildContext context) {
     List<CheckboxModel> itensMarcados =
@@ -252,8 +254,14 @@ class _CadastroState extends State<Cadastro> {
                       //   ],
                       // ),
                       // Text("${itensMarcados.length}"),
+                      // validaListaPlanos
+                      /*
+                        avancar = false => faz nada
+                        avancar = true => validaListaPlanos
+                      */
                       Visibility(
-                        visible: (itensMarcados.isEmpty) ? true : false,
+                        visible: exibeErroListaPlano,
+                        // visible: (itensMarcados.isEmpty) ? true : false,
                         child: const Padding(
                           padding: EdgeInsets.symmetric(vertical: 16),
                           child: Text(
@@ -288,17 +296,7 @@ class _CadastroState extends State<Cadastro> {
  */
                   const SizedBox(height: 24),
                   Botao(
-                    onPressed: () {
-                      // if (formKey.currentState!.validate()) {
-                      //   Navigator.pop(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //       builder: (context) => const Login(),
-                      //     ),
-                      //   );
-                      // }
-                      setState(() {});
-                    },
+                    onPressed: () {},
                     label: "Voltar",
                     backgroundColor: cinza2,
                     fontColor: branco,

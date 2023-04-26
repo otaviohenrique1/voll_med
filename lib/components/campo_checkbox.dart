@@ -22,6 +22,7 @@ class _CampoCheckboxState extends State<CampoCheckbox> {
     return CheckboxListTile(
       title: Text(widget.item.texto),
       value: widget.item.checked,
+      controlAffinity: ListTileControlAffinity.leading,
       onChanged: (value) {
         setState(() {
           // bool validaValor = (value == null) ? false : true;

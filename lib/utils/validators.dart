@@ -38,7 +38,7 @@ String? validaRepitaSenha(
 
 String? validaListaPlanos(List<CheckboxModel> lista) {
   if (lista.isEmpty) {
-    return "Campo vazio";
+    return "Escolha uma opção para poder continuar";
   }
   return null;
 }
