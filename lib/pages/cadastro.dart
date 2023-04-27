@@ -3,13 +3,12 @@ import 'package:voll_med/components/campo_checkbox.dart';
 import 'package:voll_med/pages/login.dart';
 import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/utils/validators.dart';
-
-import '../components/botao.dart';
-import '../components/campo_texto.dart';
-import '../components/titulo.dart';
-import '../styles/colors.dart';
-import '../components/logo.dart';
-import '../utils/helpers.dart';
+import 'package:voll_med/components/botao.dart';
+import 'package:voll_med/components/campo_texto.dart';
+import 'package:voll_med/components/titulo.dart';
+import 'package:voll_med/styles/colors.dart';
+import 'package:voll_med/components/logo.dart';
+import 'package:voll_med/utils/helpers.dart';
 
 class Cadastro extends StatefulWidget {
   const Cadastro({super.key});
