@@ -7,33 +7,18 @@ import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/styles/colors.dart';
 import 'package:voll_med/components/logo.dart';
 
-class CadastroFormulario3 extends StatefulWidget {
-  const CadastroFormulario3({super.key});
+class Homepage extends StatefulWidget {
+  const Homepage({super.key});
 
   @override
-  State<CadastroFormulario3> createState() => _CadastroFormulario3State();
+  State<Homepage> createState() => _HomepageState();
 }
 
-class _CadastroFormulario3State extends State<CadastroFormulario3> {
+class _HomepageState extends State<Homepage> {
   var formKey = GlobalKey<FormState>();
-
-  final List<CheckboxModel> itens = [
-    CheckboxModel(texto: "Sulamerica"),
-    CheckboxModel(texto: "Unimed"),
-    CheckboxModel(texto: "Bradesco"),
-    CheckboxModel(texto: "Amil"),
-    CheckboxModel(texto: "Biosaúde"),
-    CheckboxModel(texto: "Biovida"),
-    CheckboxModel(texto: "Outros"),
-    CheckboxModel(texto: "Não tenho plano"),
-  ];
 
   @override
   Widget build(BuildContext context) {
-    // ignore: unused_local_variable
-    List<CheckboxModel> itensMarcados =
-        List.from(itens.where((item) => item.checked));
-
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 0,
@@ -69,14 +54,6 @@ class _CadastroFormulario3State extends State<CadastroFormulario3> {
                       ),
                     ),
                   ),
-                  CampoCheckbox(item: itens[0]),
-                  CampoCheckbox(item: itens[1]),
-                  CampoCheckbox(item: itens[2]),
-                  CampoCheckbox(item: itens[3]),
-                  CampoCheckbox(item: itens[4]),
-                  CampoCheckbox(item: itens[5]),
-                  CampoCheckbox(item: itens[6]),
-                  CampoCheckbox(item: itens[7]),
                   const SizedBox(height: 24),
                   Botao(
                     onPressed: () {
