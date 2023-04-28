@@ -53,7 +53,7 @@ class CampoTexto extends StatelessWidget {
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
-              color: Colors.white,
+              color: branco,
               boxShadow: const [
                 BoxShadow(
                   color: Color.fromRGBO(0, 0, 0, 0.25),
