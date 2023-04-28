@@ -149,32 +149,34 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        iconSize: 24,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Início',
-            backgroundColor: azul3,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.calendar_month),
             label: 'Consultas',
-            backgroundColor: azul3,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.search),
             label: 'Explorar',
-            backgroundColor: azul3,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Perfil',
-            backgroundColor: azul3,
           ),
         ],
         currentIndex: _selectedTabIndex,
-        selectedItemColor: azul2,
         onTap: _onItemTapped,
+        iconSize: 24,
+        showSelectedLabels: true,
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: azul3,
+        selectedItemColor: azul2,
+        unselectedItemColor: branco,
+        selectedFontSize: 16,
+        unselectedFontSize: 16,
       ),
     );
   }
