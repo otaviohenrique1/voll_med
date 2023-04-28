@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/components/campo_checkbox.dart';
 import 'package:voll_med/pages/cadastro_formulario_2.dart';
 import 'package:voll_med/utils/validators.dart';
 import 'package:voll_med/components/botao.dart';
