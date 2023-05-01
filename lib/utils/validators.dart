@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/components/campo_checkbox.dart';
 
 bool validaValor(String? value) {
   return (value == null || value.isEmpty);

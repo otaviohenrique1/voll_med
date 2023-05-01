@@ -55,6 +55,8 @@ class _CadastroFormulario3State extends State<CadastroFormulario3> {
                     titulo: "Insira alguns dados básicos:",
                     color: cinza3,
                     alignment: Alignment.center,
+                    fontSize: 24,
+                    fontWeight: fontWeightBold,
                   ),
                   const SizedBox(height: 24),
                   const Align(

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/components/campo_checkbox.dart';
 import 'package:voll_med/components/campo_texto.dart';
-import 'package:voll_med/pages/cadastro_formulario_2.dart';
 import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/titulo.dart';
@@ -56,6 +54,8 @@ class _HomepageState extends State<Homepage> {
               titulo: "Boas-vindas!",
               color: azul2,
               alignment: Alignment.centerLeft,
+              fontSize: 24,
+              fontWeight: fontWeightBold,
             ),
             Form(
               key: formKey,
@@ -118,6 +118,8 @@ class _HomepageState extends State<Homepage> {
               titulo: "Depoimentos",
               color: azul3,
               alignment: Alignment.center,
+              fontSize: 24,
+              fontWeight: fontWeightBold,
             ),
             const SizedBox(height: 32),
             const Column(

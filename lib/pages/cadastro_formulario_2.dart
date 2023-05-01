@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/pages/cadastro_formulario_1.dart';
 import 'package:voll_med/pages/cadastro_formulario_3.dart';
+import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/utils/validators.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_texto.dart';
@@ -60,6 +61,8 @@ class _CadastroFormulario2State extends State<CadastroFormulario2> {
                     titulo: "Agora, mais alguns dados sobre você:",
                     color: cinza3,
                     alignment: Alignment.center,
+                    fontSize: 24,
+                    fontWeight: fontWeightBold,
                   ),
                   const SizedBox(height: 24),
                   CampoTexto(

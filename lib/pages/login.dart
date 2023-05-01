@@ -52,6 +52,8 @@ class _LoginState extends State<Login> {
               titulo: "Faça login em sua conta",
               color: cinza3,
               alignment: Alignment.center,
+              fontSize: 24,
+              fontWeight: fontWeightBold,
             ),
             const SizedBox(height: 48),
             Form(

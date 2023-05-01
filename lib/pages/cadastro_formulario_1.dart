@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/pages/cadastro_formulario_2.dart';
+import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/utils/validators.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_texto.dart';
@@ -53,6 +54,8 @@ class _CadastroFormulario1State extends State<CadastroFormulario1> {
                     titulo: "Insira alguns dados básicos:",
                     color: cinza3,
                     alignment: Alignment.center,
+                    fontSize: 24,
+                    fontWeight: fontWeightBold,
                   ),
                   const SizedBox(height: 24),
                   CampoTexto(

@@ -31,6 +31,7 @@ class _CheckboxWidgetState extends State<CheckboxWidget> {
   }
 }
 
+// ignore: prefer_const_constructors
 final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
 class App2 extends StatelessWidget {
@@ -60,8 +61,8 @@ class App2 extends StatelessWidget {
             },
           ),
           floatingActionButton: FloatingActionButton(
-            child: Icon(Icons.apps),
             onPressed: listarApenasMarcados,
+            child: const Icon(Icons.apps),
           )),
     );
   }
@@ -71,7 +72,9 @@ class App2 extends StatelessWidget {
     List<CheckBoxModel> itensMarcados =
         List.from(itens.where((item) => item.checked));
 
+    // ignore: avoid_function_literals_in_foreach_calls
     itensMarcados.forEach((item) {
+      // ignore: avoid_print
       print(item.texto);
     });
   }

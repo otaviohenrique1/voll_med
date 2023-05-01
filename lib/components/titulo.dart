@@ -7,11 +7,15 @@ class Titulo extends StatelessWidget {
     required this.titulo,
     required this.color,
     required this.alignment,
+    required this.fontSize,
+    required this.fontWeight,
   });
 
   final String titulo;
   final Color color;
   final AlignmentGeometry alignment;
+  final double fontSize;
+  final FontWeight fontWeight;
 
   @override
   Widget build(BuildContext context) {
@@ -22,9 +26,11 @@ class Titulo extends StatelessWidget {
         softWrap: true,
         style: TextStyle(
           color: color,
-          fontSize: 24,
+          fontSize: fontSize,
+          // fontSize: 24,
           fontFamily: fontFamily,
-          fontWeight: fontWeightBold,
+          fontWeight: fontWeight,
+          // fontWeight: fontWeightBold,
         ),
       ),
     );
