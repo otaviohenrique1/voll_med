@@ -33,15 +33,19 @@ class _TesteTabState extends State<TesteTab> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
     Text(
-      'Index 0: Home',
+      'Início',
       style: optionStyle,
     ),
     Text(
-      'Index 1: Business',
+      'Consultas',
       style: optionStyle,
     ),
     Text(
-      'Index 2: School',
+      'Explorar',
+      style: optionStyle,
+    ),
+    Text(
+      'Perfil',
       style: optionStyle,
     ),
   ];

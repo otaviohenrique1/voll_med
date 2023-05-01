@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/components/botao_texto.dart';
+import 'package:voll_med/components/logo.dart';
+import 'package:voll_med/pages/homepage.dart';
 import 'package:voll_med/styles/colors.dart';
 import 'package:voll_med/components/botao.dart';
 import 'package:voll_med/components/campo_texto.dart';
@@ -7,8 +9,6 @@ import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/pages/cadastro.dart';
 import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/utils/validators.dart';
-
-import '../components/logo.dart';
 
 class Login extends StatefulWidget {
   const Login({super.key});
@@ -83,7 +83,14 @@ class _LoginState extends State<Login> {
                   const SizedBox(height: 24),
                   Botao(
                     onPressed: () {
-                      if (formKey.currentState!.validate()) {}
+                      // if (formKey.currentState!.validate()) {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Homepage(),
+                        ),
+                      );
+                      // }
                     },
                     label: "Entrar",
                     backgroundColor: azul4,
