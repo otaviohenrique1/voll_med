@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:voll_med/components/botao.dart';
-import 'package:voll_med/components/item_historico_medico.dart';
 import 'package:voll_med/components/medico.dart';
 import 'package:voll_med/styles/fonts.dart';
 import 'package:voll_med/components/titulo.dart';
 import 'package:voll_med/styles/colors.dart';
-
-import '../components/avatar.dart';
 
 class MinhasConsultas extends StatefulWidget {
   const MinhasConsultas({super.key});
@@ -16,18 +13,6 @@ class MinhasConsultas extends StatefulWidget {
 }
 
 class _MinhasConsultasState extends State<MinhasConsultas> {
-  var formKey = GlobalKey<FormState>();
-  final TextEditingController _especialidadeController =
-      TextEditingController();
-  final TextEditingController _localizacaoController = TextEditingController();
-
-  @override
-  void dispose() {
-    _especialidadeController.dispose();
-    _localizacaoController.dispose();
-    super.dispose();
-  }
-
   int _selectedTabIndex = 0;
 
   void _onItemTapped(int index) {
