@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voll_med/styles/colors.dart';
 
 class Avatar extends StatelessWidget {
   const Avatar({
@@ -7,16 +8,11 @@ class Avatar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        width: 64,
-        height: 64,
-        color: Colors.white,
-        child: const Placeholder(
-          child: Center(
-            child: Text("Avatar"),
-          ),
-        ),
+    return const SizedBox(
+      width: 64,
+      height: 64,
+      child: CircleAvatar(
+        backgroundColor: cinza2,
       ),
     );
   }

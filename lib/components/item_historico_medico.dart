@@ -17,10 +17,11 @@ class ItemHistoricoMedico extends StatelessWidget {
       children: [
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             const Icon(
               Icons.circle,
-              size: 8,
+              size: 6,
             ),
             const SizedBox(width: 8),
             Titulo(

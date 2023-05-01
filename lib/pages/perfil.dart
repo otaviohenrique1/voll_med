@@ -74,7 +74,7 @@ class _PerfilState extends State<Perfil> {
                 children: [
                   const Titulo(
                     titulo: "Informações pessoais",
-                    color: azul3,
+                    color: azul2,
                     alignment: Alignment.center,
                     fontSize: 18,
                     fontWeight: fontWeightBold,
@@ -126,7 +126,7 @@ class _PerfilState extends State<Perfil> {
                         ItemHistoricoMedico(texto: "Sinusite"),
                       ],
                     ),
-                  )
+                  ),
                 ],
               ),
             ),

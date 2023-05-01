@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:voll_med/pages/perfil.dart';
+import 'package:voll_med/pages/minhas_consultas.dart';
+// import 'package:voll_med/pages/perfil.dart';
 // import 'package:voll_med/pages/homepage.dart';
 // import 'package:voll_med/pages/cadastro.dart';
 // import 'package:voll_med/pages/login.dart';
@@ -22,7 +23,8 @@ class VollMed extends StatelessWidget {
             const AppBarTheme(backgroundColor: Color.fromRGBO(0, 33, 61, 1)),
         useMaterial3: true,
       ),
-      home: const Perfil(),
+      home: const MinhasConsultas(),
+      // home: const Perfil(),
       // home: const Homepage(),
       // home: const Login(),
       // home: const Cadastro(),
