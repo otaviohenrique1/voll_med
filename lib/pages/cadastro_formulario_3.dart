@@ -71,6 +71,7 @@ class _CadastroFormulario3State extends State<CadastroFormulario3> {
                       ),
                     ),
                   ),
+                  CampoCheckbox(item: CheckboxModel(texto: "")),
                   CampoCheckbox(item: itens[0]),
                   CampoCheckbox(item: itens[1]),
                   CampoCheckbox(item: itens[2]),

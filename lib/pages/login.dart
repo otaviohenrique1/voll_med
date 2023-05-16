@@ -130,7 +130,7 @@ class _LoginState extends State<Login> {
                         fontWeight: fontWeightBold,
                       ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
